@@ -1,8 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv5yafcr2lub6"]
+[gd_scene load_steps=10 format=3 uid="uid://bv5yafcr2lub6"]
 
 [ext_resource type="Texture2D" uid="uid://dksbicp01upe1" path="res://assets/backgrounds/verysamplebg.png" id="1_6508q"]
+[ext_resource type="Script" path="res://scenes/sortingmenu/date.gd" id="2_dx1le"]
+[ext_resource type="Script" path="res://scenes/sortingmenu/current_item_name.gd" id="3_ns325"]
+[ext_resource type="Script" path="res://scenes/sortingmenu/current_item_quality.gd" id="4_fn8ln"]
+
+[sub_resource type="SystemFont" id="SystemFont_axsbp"]
+font_names = PackedStringArray("Sylfaen")
+
+[sub_resource type="SystemFont" id="SystemFont_8am48"]
+font_names = PackedStringArray("Sylfaen")
 
 [sub_resource type="SystemFont" id="SystemFont_kd5em"]
+font_names = PackedStringArray("Sylfaen")
+
+[sub_resource type="SystemFont" id="SystemFont_02rk7"]
+font_names = PackedStringArray("Sylfaen")
+
+[sub_resource type="SystemFont" id="SystemFont_pupji"]
 font_names = PackedStringArray("Sylfaen")
 
 [node name="sorting_menu" type="Control"]
@@ -41,14 +56,21 @@ theme_override_constants/separation = 60
 
 [node name="Date" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_axsbp")
+theme_override_font_sizes/font_size = 36
+text = "NOT current Date"
 horizontal_alignment = 1
-
-[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+script = ExtResource("2_dx1le")
 
 [node name="CurrentItemName" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_8am48")
+theme_override_font_sizes/font_size = 42
+text = "NOT current item name"
 horizontal_alignment = 1
+script = ExtResource("3_ns325")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -92,3 +114,33 @@ text = "Discard"
 
 [node name="Seperator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="VerticalSeperator" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 550)
+layout_mode = 2
+
+[node name="CurrentItemQuality" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_02rk7")
+theme_override_font_sizes/font_size = 24
+text = "Item Quality: Null"
+horizontal_alignment = 1
+script = ExtResource("4_fn8ln")
+
+[node name="CurrentPocketCapacity" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pupji")
+theme_override_font_sizes/font_size = 24
+text = "Pocket Capacity: Null"
+horizontal_alignment = 1
