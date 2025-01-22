@@ -1,10 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyh1g1t3y8yra"]
+[gd_scene load_steps=11 format=3 uid="uid://cyh1g1t3y8yra"]
 
 [ext_resource type="Texture2D" uid="uid://ch6swe2xj7k0h" path="res://assets/backgrounds/sampleBackground.png" id="1_6i6lo"]
 [ext_resource type="Script" path="res://scenes/mainmenu/main_menu.gd" id="1_sd6su"]
+[ext_resource type="Texture2D" uid="uid://ce52xmos2c8vo" path="res://assets/buttons/start normal.png" id="3_yiuux"]
+[ext_resource type="Texture2D" uid="uid://ce52xmos2c8vo" path="res://assets/buttons/start normal.png" id="4_21ia8"]
+[ext_resource type="Texture2D" uid="uid://ce52xmos2c8vo" path="res://assets/buttons/start normal.png" id="5_6pjld"]
 
 [sub_resource type="SystemFont" id="SystemFont_xeowd"]
 font_names = PackedStringArray("Sylfaen")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixa0h"]
+atlas = ExtResource("3_yiuux")
+region = Rect2(0, 0, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmkfa"]
+atlas = ExtResource("3_yiuux")
+region = Rect2(64, 0, 64, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pbo1t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixa0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmkfa")
+}],
+"loop": true,
+"name": &"start button",
+"speed": 5.0
+}]
 
 [sub_resource type="SystemFont" id="SystemFont_7onbw"]
 font_names = PackedStringArray("Sylfaen")
@@ -63,8 +88,22 @@ layout_mode = 2
 theme_override_constants/separation = 18
 alignment = 1
 
+[node name="Node2D" type="Node2D" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+position = Vector2(-516, -12)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer/HBoxContainer/VBoxContainer/Node2D"]
+position = Vector2(574, 192)
+scale = Vector2(2.21875, 2.21875)
+sprite_frames = SubResource("SpriteFrames_pbo1t")
+animation = &"start button"
+
 [node name="Seperator 2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_21ia8")
+texture_pressed = ExtResource("5_6pjld")
 
 [node name="Start_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
