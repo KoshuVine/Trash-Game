@@ -1,9 +1,6 @@
+extends Node
+var possible_items = []
 
-class_name Trash extends Node
-
-@export var item_name: String
-@export var texture: AnimatedSprite2D
-@export var quality: int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
