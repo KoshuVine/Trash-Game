@@ -1,2 +1,2 @@
-# Trash Game
+Trash Game
  
