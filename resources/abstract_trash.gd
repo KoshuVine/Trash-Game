@@ -1,5 +1,5 @@
 
-class_name Trash extends Node
+class_name AbstractTrash extends Node
 
 @export var item_name: String
 @export var texture: AnimatedSprite2D
