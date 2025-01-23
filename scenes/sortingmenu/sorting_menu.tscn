@@ -79,23 +79,6 @@ text = "NOT current item name"
 horizontal_alignment = 1
 script = ExtResource("3_ns325")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-alignment = 2
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
-layout_mode = 2
-alignment = 2
-
-[node name="Keep_Button" type="Button" parent="MarginContainer/HBoxContainer2/VBoxContainer2"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_kd5em")
-theme_override_font_sizes/font_size = 64
-text = "Keep"
-
-[node name="Seperator" type="Control" parent="MarginContainer/HBoxContainer2/VBoxContainer2"]
-layout_mode = 2
-
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
@@ -152,6 +135,21 @@ theme_override_font_sizes/font_size = 24
 text = "Pocket Capacity: Null"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer2/Keep_Button" to="." method="_on_keep_button_pressed"]
+[node name="VerticalSeperator2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Keep_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_kd5em")
+theme_override_font_sizes/font_size = 64
+text = "Keep"
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Checklist_Button" to="." method="_on_checklist_button_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Discard_Button" to="." method="_on_discard_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer3/Keep_Button" to="." method="_on_keep_button_pressed"]

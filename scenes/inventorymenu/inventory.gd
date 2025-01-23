@@ -1,6 +1,6 @@
 extends Node
-
-
+var inventory = []
+var i = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if !SignalBus.is_connected("keep_item", keep):
@@ -12,7 +12,10 @@ func _process(delta: float) -> void:
 	pass
 
 func keep() -> void:
-	print("Item Kept")
-
+	#inventory.append[SortingMenu.to_pull[i]]
+	inventory.append(SortingMenu.pull())
+	print(str(inventory[i]) + "added to Inventory")
+	i = i+1
 func discard() -> void:
-	print("Item Discarded")
+	i = i+1
+	print(str(SortingMenu.to_pull[i]) + "not added to Inventory")
