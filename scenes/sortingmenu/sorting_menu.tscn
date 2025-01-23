@@ -7,18 +7,23 @@
 
 [sub_resource type="SystemFont" id="SystemFont_axsbp"]
 font_names = PackedStringArray("Sylfaen")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_8am48"]
 font_names = PackedStringArray("Sylfaen")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_kd5em"]
 font_names = PackedStringArray("Sylfaen")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_02rk7"]
 font_names = PackedStringArray("Sylfaen")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_pupji"]
 font_names = PackedStringArray("Sylfaen")
+subpixel_positioning = 0
 
 [node name="sorting_menu" type="Control"]
 layout_mode = 3

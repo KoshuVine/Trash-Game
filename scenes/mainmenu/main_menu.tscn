@@ -1,20 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyh1g1t3y8yra"]
+[gd_scene load_steps=9 format=3 uid="uid://cyh1g1t3y8yra"]
 
 [ext_resource type="Texture2D" uid="uid://ch6swe2xj7k0h" path="res://assets/backgrounds/sampleBackground.png" id="1_6i6lo"]
 [ext_resource type="Script" path="res://scenes/mainmenu/main_menu.gd" id="1_sd6su"]
-[ext_resource type="Texture2D" uid="uid://ce52xmos2c8vo" path="res://assets/buttons/start normal.png" id="3_yiuux"]
-[ext_resource type="Texture2D" uid="uid://ce52xmos2c8vo" path="res://assets/buttons/start normal.png" id="4_21ia8"]
 [ext_resource type="Texture2D" uid="uid://ce52xmos2c8vo" path="res://assets/buttons/start normal.png" id="5_6pjld"]
 
 [sub_resource type="SystemFont" id="SystemFont_xeowd"]
 font_names = PackedStringArray("Sylfaen")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixa0h"]
-atlas = ExtResource("3_yiuux")
+atlas = ExtResource("5_6pjld")
 region = Rect2(0, 0, 64, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmkfa"]
-atlas = ExtResource("3_yiuux")
+atlas = ExtResource("5_6pjld")
 region = Rect2(64, 0, 64, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pbo1t"]
@@ -102,7 +100,7 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_21ia8")
+texture_normal = ExtResource("5_6pjld")
 texture_pressed = ExtResource("5_6pjld")
 
 [node name="Start_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
