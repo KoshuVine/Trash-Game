@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 	pass
 
 func keep() -> void:
-	#inventory.append[SortingMenu.to_pull[i]]
 	inventory.append(SortingMenu.pull())
 	print(str(inventory[i]) + "added to Inventory")
 	i = i+1
