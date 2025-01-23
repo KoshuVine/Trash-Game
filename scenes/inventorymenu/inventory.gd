@@ -1,5 +1,5 @@
 extends Node
-var inventory_base = []
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -7,7 +7,6 @@ func _ready() -> void:
 		SignalBus.keep_item.connect(keep)
 	if !SignalBus.is_connected("discard_item", discard):
 		SignalBus.discard_item.connect(discard)
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
