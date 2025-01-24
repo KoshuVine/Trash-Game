@@ -21,6 +21,7 @@ SignalBus="*res://signal_bus.gd"
 Inventory="*res://scenes/inventorymenu/inventory.gd"
 Item="*res://item.gd"
 SortingMenu="*res://scenes/sortingmenu/sorting_menu.gd"
+SaveMaster="*res://save_master.gd"
 
 [editor]
 

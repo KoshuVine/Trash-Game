@@ -18,4 +18,4 @@ func _process(delta: float) -> void:
 	pass
 
 func _to_string():
-	print(str(trash_name))
+	return trash_name
