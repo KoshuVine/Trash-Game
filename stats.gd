@@ -9,3 +9,4 @@ var wealth = 100
 func calculate_sanity():
 	var sanity = (happiness + hunger + hygiene + wealth) / 4
 	return sanity
+	

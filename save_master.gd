@@ -15,6 +15,7 @@ func read_file():
 	var file = FileAccess.open(path, FileAccess.READ)
 	var content = json.parse_string(file.get_as_text)
 	return content
+	
 func new_save():
 	var file = FileAccess.open(default_save_path, FileAccess.READ)
 	var content = json.parse_string(file.get_as_text)
