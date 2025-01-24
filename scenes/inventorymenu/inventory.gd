@@ -16,5 +16,5 @@ func keep() -> void:
 	print(str(inventory[i]) + "added to Inventory")
 	i = i+1
 func discard() -> void:
-	i = i+1
+
 	print(str(SortingMenu.to_pull[i]) + "not added to Inventory")
