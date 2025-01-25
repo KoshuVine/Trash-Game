@@ -1,12 +1,18 @@
 extends Node
 
-var happiness = 100
-var hunger = 100
-var hygiene = 100
-var wealth = 100
+var MAX_HAPPINESS = 100
+var MAX_HUNGER = 100
+var MAX_HYGIENE = 100
+var MAX_SANITY = 100
 
 
-func calculate_sanity():
-	var sanity = (happiness + hunger + hygiene + wealth) / 4
+func _ready() -> void:
+	if !SignalBus.is_connected("update", calculate_stats()):
+		SignalBus.update.connect(calculate_stats())
+		
+func calculate_stats():
+	var sanity = (MAX_HAPPINESS + MAX_HUNGER + MAX_HYGIENE) / 3
 	return sanity
+
+	
 	
